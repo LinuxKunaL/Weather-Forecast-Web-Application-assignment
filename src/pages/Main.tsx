@@ -109,7 +109,7 @@ const Main: React.FC = () => {
   const orderByName = () => {
     setListOfCities(listOfCities.reverse());
   };
-  
+
   return (
     <div className="h-full p-3 text-xl bg-transparent bg-gradient-to-tr from-zinc-950 to-zinc-800 w-full flex justify-center items-center">
       <Toaster />
@@ -161,7 +161,7 @@ const Main: React.FC = () => {
             </div>
             <div
               style={{ visibility: "hidden" }}
-              className="flex h-[10pc] overflow-y-auto opacity-0 visible w-full list-none flex-col absolute top-10 p-2 rounded-lg border-[1px] border-zinc-800/90 divide-y-[1px] divide-zinc-800/70 bg-zinc-900/90 backdrop-blur-md z-10"
+              className="flex h-[10pc] overflow-y-auto opacity-0 visible w-full list-none flex-col absolute top-12 left-0 p-2 rounded-lg border-[1px] border-zinc-800/90 divide-y-[1px] divide-zinc-800/70 bg-zinc-900/90 backdrop-blur-md z-10"
               ref={searchRef}
               onMouseLeave={() =>
                 searchRef.current?.classList.remove("showSearchRecommend")
