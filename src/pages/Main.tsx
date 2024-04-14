@@ -25,10 +25,11 @@ interface cities {
 const Main: React.FC = () => {
   const searchRef = useRef<HTMLDivElement>(null);
   const [searchForRecommendBox, setSearchForRecommendBox] = useState<any>("");
-  const [onChangeInput, setOnChangeInput] = useState<string | any>();
+  const [onChangeInput, setOnChangeInput] = useState<string | any>("");
   const [limit, setLimit] = useState(10);
   const [searchRecommendBox, setSearchRecommendBox] = useState<string[]>([]);
   const [listOfCities, setListOfCities] = useState<cities[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     axios
@@ -40,10 +41,11 @@ const Main: React.FC = () => {
       .then((res) => {
         const { results } = res.data;
         setListOfCities(results);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        Toast("Invalid API limit", "error");
+        Toast("API limit reach", "error");
       });
   }, [limit]);
 
@@ -110,6 +112,36 @@ const Main: React.FC = () => {
   return (
     <div className="h-full p-3 text-xl bg-transparent bg-gradient-to-tr from-zinc-950 to-zinc-800 w-full flex justify-center items-center">
       <Toaster />
+      {isLoading ? (
+        <div className="absolute transition-all flex justify-center items-center h-full w-full bg-zinc-800 z-20">
+          <svg
+            className="h-32 w-32"
+            version="1.1"
+            id="L9"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 100 100"
+            enableBackground="new 0 0 0 0"
+            xmlBase="preserve"
+          >
+            <path
+              fill="#fff"
+              d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                dur="1s"
+                from="0 50 50"
+                to="360 50 50"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+        </div>
+      ) : null}
       <div className="border-[1px] flex flex-col gap-3 text-white border-zinc-600/40 p-3 rounded-lg bg-zinc-800/50 backdrop-blur-md shadow-xl shadow-zinc-950/40 hover:shadow-lg transition-all w-full lg:w-max">
         <div className="flex text-xl items-center gap-2">
           <div className="px-2 h-12 py-1 w-48 text-lg text-white/80 bg-zinc-900/40 rounded-full flex justify-between items-center border-[1px] border-zinc-800/90 relative">
