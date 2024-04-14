@@ -4,6 +4,8 @@ This project was made in typescript and tailwind css
 
 ### live demo
 
+https://weather-forecast-web-application-assignment.vercel.app
+
 ### `git clone https://github.com/LinuxKunaL/Weather-Forecast-Web-Application-assignment.git`
 
 Clone Repository
