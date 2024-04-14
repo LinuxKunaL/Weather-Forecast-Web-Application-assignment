@@ -23,3 +23,8 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### screenshot
+
+![Screenshot from 2024-04-14 05-54-26](https://github.com/LinuxKunaL/Weather-Forecast-Web-Application-assignment/assets/75113218/f0cf8528-a929-42d4-82cb-8898b9ba1994)
+
+
+![Screenshot from 2024-04-14 05-54-34](https://github.com/LinuxKunaL/Weather-Forecast-Web-Application-assignment/assets/75113218/1872d7d8-262a-40c6-85d8-91e134de42bc)
