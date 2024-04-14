@@ -109,6 +109,7 @@ const Main: React.FC = () => {
   const orderByName = () => {
     setListOfCities(listOfCities.reverse());
   };
+  
   return (
     <div className="h-full p-3 text-xl bg-transparent bg-gradient-to-tr from-zinc-950 to-zinc-800 w-full flex justify-center items-center">
       <Toaster />
