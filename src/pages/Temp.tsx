@@ -41,7 +41,7 @@ interface forecast {
 
 const Temp: React.FC = () => {
   const navigate = useNavigate();
-  const API_KEY: string = "5cb8d6323dc2288570c7608201d44f80";
+  const API_KEY: string = process.env.REACT_APP_API_KEY || "5cb8d6323dc2288570c7608201d44f80";
   const { id } = useParams<string>();
   const paramsData: any = id?.split("+");
   const [weatherData, setWeatherData] = useState<weatherData>();
