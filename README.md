@@ -16,6 +16,11 @@ Clone Repository
 
 Install all necessary dependency in the app.
 
+### `create .env`
+
+Create a .env file in the root directory.
+Add your OpenWeatherMap API key as REACT_APP_API_KEY=your_api_key_here.
+
 ### `npm start`
 
 Runs the app in the development mode.\
